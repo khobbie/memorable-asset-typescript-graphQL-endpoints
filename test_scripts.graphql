@@ -1,5 +1,6 @@
-
+***************
 # Create asset
+***************
 
 mutation {
   createAsset(
@@ -22,8 +23,9 @@ mutation {
   }
 }
 
-
-# Asset by id
+  ***************
+  # Asset by id
+  ***************
 
 {
   asset(id: 1) {
@@ -37,12 +39,17 @@ mutation {
   }
 }
 
+  *******************************
+  # Get TotalAssetScores BY ID
+  *****************************
 
 mutation {
   totalAssetsScores(data: { id: 1 })
 }
 
-
+  ************************************
+  # Average Score BY type & scoreType
+  ************************************
 
  {
    averageScore(data: { type: "video", score_type: 1 })
