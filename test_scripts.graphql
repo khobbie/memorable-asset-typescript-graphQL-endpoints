@@ -24,6 +24,24 @@ mutation {
 }
 
   ***************
+  # GET all Asset 
+  ***************
+
+
+{
+    getAssets {
+         id
+        type
+        filename
+        extension
+        score_type_1
+        score_type_2
+        score_type_3
+    }
+}
+
+
+  ***************
   # Asset by id
   ***************
 

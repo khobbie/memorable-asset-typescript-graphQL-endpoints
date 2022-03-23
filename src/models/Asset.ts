@@ -1,12 +1,13 @@
 import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
+import { Min, Max } from "class-validator";
 
 @Entity()
 @ObjectType()
 export class Asset extends BaseEntity {
   @Field(() => ID)
   @PrimaryGeneratedColumn()
-  id: number;
+  readonly id: number;
 
   @Field(() => String)
   @Column({ nullable: false })
@@ -21,14 +22,20 @@ export class Asset extends BaseEntity {
   extension: string;
 
   @Field(() => Number)
+  @Min(0)
+  @Max(100)
   @Column({ nullable: true })
   score_type_1: number;
 
   @Field(() => Number)
+  @Min(0)
+  @Max(100)
   @Column({ nullable: true })
   score_type_2: number;
 
   @Field(() => Number)
+  @Min(0)
+  @Max(100)
   @Column({ nullable: true })
   score_type_3: number;
 }

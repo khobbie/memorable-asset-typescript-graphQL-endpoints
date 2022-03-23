@@ -7,14 +7,14 @@ import { Any, Connection, Double, getConnection, getManager } from "typeorm";
 
 @Resolver()
 export class AssetResolver {
-  @Query(() => Asset)
-  assets() {
-    return Asset.find();
+  @Query(() => [Asset])
+  async getAssets() {
+    return await Asset.find();
   }
 
   @Query(() => Asset)
-  asset(@Arg("id") id: number) {
-    return Asset.findOne({ where: { id } });
+  async asset(@Arg("id") id: string) {
+    return await Asset.findOne({ where: { id } });
   }
 
   @Mutation(() => Asset)
@@ -73,14 +73,14 @@ export class AssetResolver {
     // return scoreType_i;
 
     const entityManager = getManager();
-    const result = await entityManager.query(
+    let result = await entityManager.query(
       `
-        SELECT AVG( $1) average_score FROM asset;
+        SELECT AVG( $1) AS average_score FROM asset WHERE type=$2;
         `,
-      [scoreType_i]
+      [scoreType_i, type]
     );
 
-    return result[0].average_score.toString();
+    return result[0].average_score.toString(); //result[0].average_score.toString();
     /*
     return result
       .then((res) => {
