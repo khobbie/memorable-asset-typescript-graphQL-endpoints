@@ -13,6 +13,8 @@
 
 **Run `npm start` to start application `<http://127.0.0.1:3333>`**
 
+GraphQL Test Script: `'/test_scripts.graphql'`
+
 **Postman API Documentation: <https://documenter.getpostman.com/view/1937580/UVsSNiXB>**
 
 **Assignment here: `'/Tech Test - Back End Developer.pdf'`**

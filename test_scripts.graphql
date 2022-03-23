@@ -1,0 +1,49 @@
+
+# Create asset
+
+mutation {
+  createAsset(
+    data: {
+      type: "vidoe"
+      filename: "192003.mp4"
+      extension: "mp4"
+      score_type_1: 23
+      score_type_2: 5
+      score_type_3: 8
+    }
+  ) {
+    id
+    type
+    filename
+    extension
+    score_type_1
+    score_type_2
+    score_type_3
+  }
+}
+
+
+# Asset by id
+
+{
+  asset(id: 1) {
+    id
+    type
+    filename
+    extension
+    score_type_1
+    score_type_2
+    score_type_3
+  }
+}
+
+
+mutation {
+  totalAssetsScores(data: { id: 1 })
+}
+
+
+
+ {
+   averageScore(data: { type: "video", score_type: 1 })
+ }
