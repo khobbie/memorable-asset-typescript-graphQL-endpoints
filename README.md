@@ -16,3 +16,5 @@
 **Postman API Documentation: <https://documenter.getpostman.com/view/1937580/UVsSNiXB>**
 
 **Assignment here: `'/Tech Test - Back End Developer.pdf'`**
+
+**Memorable Asset RESTFul Endpoints:** *<https://github.com/khobbie/MomorableTestAssessment>*
