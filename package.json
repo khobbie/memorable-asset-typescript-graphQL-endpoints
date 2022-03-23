@@ -1,0 +1,23 @@
+{
+    "name": "learn-typegraphql",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon -w src --ext ts --exec ts-node src/index.ts"
+    },
+    "author": "Kwabena Amaph (ampahkwabena5@gmail.com)",
+    "license": "MIT",
+    "dependencies": {
+        "apollo-server": "^3.5.0",
+        "reflect-metadata": "^0.1.13",
+        "sqlite3": "^5.0.2",
+        "type-graphql": "^1.1.1",
+        "typeorm": "^0.2.41"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4"
+    }
+}
