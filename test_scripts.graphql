@@ -5,7 +5,7 @@
 mutation {
   createAsset(
     data: {
-      type: "vidoe"
+      type: "video"
       filename: "192003.mp4"
       extension: "mp4"
       score_type_1: 23
