@@ -6,10 +6,8 @@
     git clone https://github.com/khobbie/MomorableTestAssessment.git asset-typegraphQL-api
     cd asset-typegraphQL-api
     npm install
-
 #
 
-    node ace serve
 
 **Run `npm start` to start application `<http://127.0.0.1:3333>`**
 
