@@ -9,7 +9,7 @@
 #
 
 
-**Run `npm start` to start application `<http://127.0.0.1:3333>`**
+**Run `npm start` to start application `<http://127.0.0.1:4000>`**
 
 GraphQL Test Script: `'/test_scripts.graphql'`
 
